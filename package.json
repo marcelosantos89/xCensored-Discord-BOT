@@ -1,0 +1,18 @@
+{
+  "name": "xcensored-bot",
+  "version": "0.0.1",
+  "description": "xCensored Discord Bot. Will be doing some stuff. Invite URL: https://discordapp.com/oauth2/authorize?&client_id=726803121032003654&scope=bot&permissions=593024",
+  "main": "src/main.js",
+  "author": "Marcelo Santos",
+  "scripts": {
+    "start": "nodemon ./src/main.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "youtube-api": "^2.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
