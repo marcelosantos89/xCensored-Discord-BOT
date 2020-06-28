@@ -1,5 +1,3 @@
-const { prefix } = require('../../config.json')
-
 module.exports = {
   name: 'help',
   description: 'List all of my commands or info about a specific command.',
@@ -7,6 +5,7 @@ module.exports = {
   execute(message, args) {
     const data = []
     const { commands } = message.client
+    const prefix = "!"
 
     if (!args.length) {
       data.push('Here\'s a list of all my commands:')
