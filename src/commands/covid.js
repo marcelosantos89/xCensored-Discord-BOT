@@ -25,10 +25,13 @@ module.exports = {
             { name: 'Data', value: results[results.length - 1].data },
             { name: 'Confirmados', value: results[results.length - 1].confirmados, inline: true },
             { name: 'Ontem', value: results[results.length - 1].confirmados - results[results.length - 2].confirmados, inline: true },
-            { name: 'Recuperados', value: results[results.length - 1].recuperados },
+            { name: '\u200B', value: '\u200B' },
+            { name: 'Recuperados', value: results[results.length - 1].recuperados, inline: true },
             { name: 'Ontem', value: results[results.length - 1].recuperados - results[results.length - 2].recuperados, inline: true },
-            { name: 'Óbitos', value: results[results.length - 1].obitos },
+            { name: '\u200B', value: '\u200B' },
+            { name: 'Óbitos', value: results[results.length - 1].obitos, inline: true },
             { name: 'Ontem', value: results[results.length - 1].obitos - results[results.length - 1].obitos, inline: true },
+            { name: '\u200B', value: '\u200B' },
             { name: 'Suspeitos', value: results[results.length - 1].suspeitos },
           )
           .setTimestamp()
