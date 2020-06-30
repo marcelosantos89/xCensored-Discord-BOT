@@ -20,21 +20,18 @@ module.exports = {
           .setURL('https://covid19.min-saude.pt/')
           .setDescription('Ponto de Situação Atual em Portugal')
           .setThumbnail('https://www.dgs.pt/upload/imagens/i032588.png')
-          .addField(
+          .addFields(
             // { name: '\u200B', value: '\u200B' },
             { name: 'Data', value: results[results.length - 1].data },
             { name: 'Confirmados', value: results[results.length - 1].confirmados, inline: true },
-            { name: 'Variação', value: results[results.length - 1].confirmados - results[results.length - 2].confirmados, inline: true }
-          )
-          .addField(
+            { name: 'Variacao', value: results[results.length - 1].confirmados - results[results.length - 2].confirmados, inline: true },
+            { name: '&nbsp;', value: '&nbsp;' },
             { name: 'Recuperados', value: results[results.length - 1].recuperados, inline: true },
             { name: 'Variação', value: results[results.length - 1].recuperados - results[results.length - 2].recuperados, inline: true },
-          )
-          .addField(
+            { name: '&nbsp;', value: '&nbsp;' },
             { name: 'Óbitos', value: results[results.length - 1].obitos, inline: true },
             { name: 'Variação', value: results[results.length - 1].obitos - results[results.length - 1].obitos, inline: true },
-          )
-          .addField(
+            { name: '&nbsp;', value: '&nbsp;' },
             { name: 'Suspeitos', value: results[results.length - 1].suspeitos },
           )
           .setTimestamp()
