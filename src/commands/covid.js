@@ -21,18 +21,24 @@ module.exports = {
           .setDescription('Ponto de Situação Atual em Portugal')
           .setThumbnail('https://www.dgs.pt/upload/imagens/i032588.png')
           .addFields(
-            // { name: '\u200B', value: '\u200B' },
             { name: 'Data', value: results[results.length - 1].data },
             { name: 'Confirmados', value: results[results.length - 1].confirmados, inline: true },
-            { name: 'Variacao', value: results[results.length - 1].confirmados - results[results.length - 2].confirmados, inline: true },
-            { name: '&nbsp;', value: '&nbsp;' },
+            { name: 'Variacao (24h)', value: results[results.length - 1].confirmados - results[results.length - 2].confirmados, inline: true },
+            { name: '\u200b', value: '\u200b', inline: true }
+          )
+          .addFields(
             { name: 'Recuperados', value: results[results.length - 1].recuperados, inline: true },
-            { name: 'Variação', value: results[results.length - 1].recuperados - results[results.length - 2].recuperados, inline: true },
-            { name: '&nbsp;', value: '&nbsp;' },
+            { name: 'Variação (24h)', value: results[results.length - 1].recuperados - results[results.length - 2].recuperados, inline: true },
+            { name: '\u200b', value: '\u200b', inline: true }
+          )
+          .addFields(
             { name: 'Óbitos', value: results[results.length - 1].obitos, inline: true },
-            { name: 'Variação', value: results[results.length - 1].obitos - results[results.length - 1].obitos, inline: true },
-            { name: '&nbsp;', value: '&nbsp;' },
-            { name: 'Suspeitos', value: results[results.length - 1].suspeitos },
+            { name: 'Variação (24h)', value: results[results.length - 1].obitos - results[results.length - 1].obitos, inline: true },
+            { name: '\u200b', value: '\u200b', inline: true }
+          )
+          .addFields(
+            { name: 'Suspeitos', value: results[results.length - 1].suspeitos, inline: true },
+            { name: 'Variação (24h)', value: results[results.length - 1].suspeitos - results[results.length - 2].suspeitos, inline: true },
           )
           .setTimestamp()
           
