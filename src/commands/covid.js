@@ -24,14 +24,17 @@ module.exports = {
             // { name: '\u200B', value: '\u200B' },
             { name: 'Data', value: results[results.length - 1].data },
             { name: 'Confirmados', value: results[results.length - 1].confirmados, inline: true },
-            { name: 'Ontem', value: results[results.length - 1].confirmados - results[results.length - 2].confirmados, inline: true },
-            { name: '\u200B', value: '\u200B' },
+            { name: 'Variação', value: results[results.length - 1].confirmados - results[results.length - 2].confirmados, inline: true }
+          )
+          .addFields(
             { name: 'Recuperados', value: results[results.length - 1].recuperados, inline: true },
-            { name: 'Ontem', value: results[results.length - 1].recuperados - results[results.length - 2].recuperados, inline: true },
-            { name: '\u200B', value: '\u200B' },
+            { name: 'Variação', value: results[results.length - 1].recuperados - results[results.length - 2].recuperados, inline: true },
+          )
+          .addFields(
             { name: 'Óbitos', value: results[results.length - 1].obitos, inline: true },
-            { name: 'Ontem', value: results[results.length - 1].obitos - results[results.length - 1].obitos, inline: true },
-            { name: '\u200B', value: '\u200B' },
+            { name: 'Variação', value: results[results.length - 1].obitos - results[results.length - 1].obitos, inline: true },
+          )
+          .addFields(
             { name: 'Suspeitos', value: results[results.length - 1].suspeitos },
           )
           .setTimestamp()
