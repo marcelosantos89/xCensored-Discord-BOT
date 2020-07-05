@@ -1,7 +1,10 @@
 require('dotenv').config()
+
 const fs = require('fs')
 const Discord = require('discord.js')
+const tempChannels = require('./jobs/deleteEmptyTempChannels')
 const prefix = "!"
+
 
 const client = new Discord.Client()
 client.commands = new Discord.Collection()
@@ -20,6 +23,9 @@ client.on('message', message => {
 
   if (!message.content.startsWith("!") || message.author.bot)
     return
+
+  // Clean Empty Temp Channels
+  tempChannels.execute(message);
 
   const args = message.content.slice(prefix.length).split(/ +/)
   const commandName = args.shift().toLowerCase()
