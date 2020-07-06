@@ -33,7 +33,7 @@ module.exports = {
           )
           .addFields(
             { name: 'Óbitos', value: results[results.length - 1].obitos, inline: true },
-            { name: 'Variação (24h)', value: results[results.length - 1].obitos - results[results.length - 1].obitos, inline: true },
+            { name: 'Variação (24h)', value: results[results.length - 1].obitos - results[results.length - 2].obitos, inline: true },
             { name: '\u200b', value: '\u200b', inline: true }
           )
           .addFields(
