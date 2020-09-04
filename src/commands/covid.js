@@ -36,13 +36,12 @@ module.exports = {
             { name: 'Variação (24h)', value: results[results.length - 1].obitos - results[results.length - 2].obitos, inline: true },
             { name: '\u200b', value: '\u200b', inline: true }
           )
-          .addFields(
-            { name: 'Suspeitos', value: results[results.length - 1].suspeitos, inline: true },
-            { name: 'Variação (24h)', value: results[results.length - 1].suspeitos - results[results.length - 2].suspeitos, inline: true },
-          )
+          // .addFields(
+          //   { name: 'Suspeitos', value: results[results.length - 1].suspeitos, inline: true },
+          //   { name: 'Variação (24h)', value: results[results.length - 1].suspeitos - results[results.length - 2].suspeitos, inline: true },
+          // )
           .setTimestamp()
-          
-          console.log(results[results.length - 1])
+
           message.channel.send(exampleEmbed);
 
       });
